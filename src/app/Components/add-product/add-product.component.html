@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h1 class="text-center">Add Product</h1>
+  <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input id="title" name="title" ngModel class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input id="price" name="price" ngModel class="form-control" required type="number">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input id="description" name="description" ngModel class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="categoryId" class="form-label">Category ID</label>
+      <input id="categoryId" name="categoryId" ngModel class="form-control" required type="number">
+    </div>
+    <!-- <div class="mb-3">
+      <label for="images" class="form-label">Images</label>
+      <input id="images" name="images" ngModel class="form-control" required>
+    </div> -->
+    <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Add Product</button>
+  </form>
+</div>

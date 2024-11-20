@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <h1 class="text-center">Update Product</h1>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" >
+    <div class="mb-3">
+      <label for="id" class="form-label">Product ID</label>
+      <input id="id" formControlName="id" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input id="title" formControlName="title" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input id="price" formControlName="price" class="form-control" required type="number">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input id="description" formControlName="description" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="productForm.invalid">Update Product</button>
+  </form>
+</div>
